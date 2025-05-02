@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Shop - Compra</title>
+  <link rel="stylesheet" href="style3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Banner personalizado -->
+  <header>
+    <div class="header-left">
+      <h1>Magic Shop</h1>
+    </div>
+    <nav>
+      <ul class="list">
+        <li><a href="carrito.html">Carrito de compras</a></li>
+        <li><a href="redes.html">Redes oficiales de BTS</a></li>
+        <li><a href="venta.html">Pagina de venta</a></li>
+    </nav>
+  </header>
+
+  <!-- Contenido principal: Imagen + Formulario -->
+  <div class="main-container">
+    <div class="image-section">
+      <img src="img/Map.jpg" alt="Álbum Map">
+    </div>
+
+    <!-- PRODUCTO -->
+    <div class="form-container product" data-price="318.02">
+      <h2>BTS</h2>
+      <h3>Map Of The Soul : 7</h3>
+
+      <div class="price">MXN$318.02</div>
+      <div class="total">Total:MXN$318.02</div>
+
+      <!-- Campo para seleccionar cantidad -->
+      <div class="quantity-container">
+        <label for="quantity2">Cantidad:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart" type="button">añadir al carrito</button>
+        <button class="purchase" type="button">comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script general para todos los productos -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra - Magic Shop</title>
+  <link rel="stylesheet" href="style3.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Magic Shop</h1>
+    </div>
+    <nav>
+      <ul class="list">
+        <li><a href="venta.html">Pagina de venta</a></li>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <div class="form-container">
+      <h2> Detalle de la compra</h2>
+      <div id="checkout-details"></div>
+
+      <button onclick="cancelarCompra()" class="cancel-btn" style="margin-top: 15px;">Cancelar compra</button>
+<button onclick="confirmarCompra()" class="confirm-btn" style="margin-top: 20px;">Confirmar compra</button>
+
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
