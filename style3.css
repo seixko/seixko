@@ -1,0 +1,350 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(89, 14, 104, 0.363);
+  }
+
+  .header-left h1 {
+    margin: 0;
+    font-family:'Montserrat', sans-serif;
+    color: white;
+    font-size: 28px;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255); /* o el color que quieras al pasar el mouse */
+    text-decoration: none; /* MUY IMPORTANTE */
+}
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+  }
+
+  .image-section img {
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 380px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .form-container h2 {
+    margin-top: 0;
+    font-size: 26px;
+    font-family:'Montserrat', sans-serif;
+  }
+
+  .form-container h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family:'Montserrat', sans-serif;
+  }
+
+  .price {
+    font-size: 26px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .cashback {
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    color: rgba(157, 34, 182, 0.63);
+    margin-bottom: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .options button {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .options button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+
+
+  .add-to-cart {
+    background-color: rgba(89, 14, 104, 0.63);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .add-to-cart:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+
+  .purchase {
+    background-color: rgba(89, 14, 104, 0.63);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .purchase:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+
+  .note {
+    font-size: 13px;
+    color: lightgray;
+    text-align: center;
+  }
+  .quantity-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quantity-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: lightgray;
+  }
+  
+  .quantity-container input[type="number"] {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100px;
+  }
+
+  .total {
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:rgb(255, 255, 255);
+  }
+  
+  button.delete-btn {
+    background-color:rgba(89, 14, 104, 0.63);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  button.delete-btn:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+
+  button.finalize-btn {
+    background-color:rgba(89, 14, 104, 0.63);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  button.finalize-btn:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+  
+  .confirm-btn {
+    background-color:rgba(89, 14, 104, 0.63);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+  
+  .checkout-add-btn {
+    background-color: rgba(89, 14, 104, 0.63);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .checkout-add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+  
+  .cancel-btn {
+    background-color: rgba(89, 14, 104, 0.63);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+  }
+  
+  li {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    margin-right: 20px;
+}
+
+li:hover{
+    color: black;
+    transition: 0.4s all ease;
+}
+
+li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact-form label {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  color: white;
+}
+
+#success-message {
+  display: none;
+  color: #0f0;
+  margin-top: 12px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* o el color que prefieras */
+}
+
+
+#contact-form button:hover {
+  background-color:  rgba(89, 14, 104, 0.63);
+}
+
+.send-btn {
+  background-color: rgba(89, 14, 104, 0.63);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.send-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  transform: scale(1.05);
+}
