@@ -1,0 +1,207 @@
+/* === Mejoras visuales sin alterar funcionalidades === */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e0c3fc);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e1f47;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.title-link {
+  text-decoration: none;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+}
+
+.header-center .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-center .list li {
+  margin-left: 20px;
+}
+
+.header-center .list a {
+  text-decoration: none;
+  color: #f4e8ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header-center .list a:hover {
+  color: #ffd700;
+}
+
+.openbtn {
+  background-color: #6b347e;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar {
+  background-color: #4b2354;
+  padding-top: 60px;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  transition: 0.3s;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.sidebar a {
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #f0e6f6;
+  display: block;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  background-color: #663399;
+}
+
+.carousel-container {
+  padding: 30px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.artist-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.artist-card:hover {
+  transform: scale(1.03);
+}
+
+.artist-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #c89ce3;
+  margin-bottom: 15px;
+}
+
+.artist-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: #6b347e;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  color: #6b347e;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff69b4;
+}
+
+.carousel-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.carousel-buttons button {
+  background-color: #a16dc2;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-buttons button:hover {
+  background-color: #7d3ba5;
+}
+
+/* Banner blanco */
+header {
+  background-color: white !important;
+  color: #3e1f47 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Cambiar color de links y botones dentro del header para que sean visibles */
+.title-link {
+  color: #3e1f47 !important;
+}
+
+.header-center .list a {
+  color: #3e1f47 !important;
+}
+
+.header-center .list a:hover {
+  color: #6b347e !important;
+}
+
+.openbtn {
+  background-color: #6b347e !important;
+  color: white !important;
+}
+
+/* Formulario / tarjetas con fondo blanco y sombra */
+.artist-card {
+  background-color: white !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.204) !important;
+  color: #3e1f47 !important;
+}
+
+/* Ajustar los links sociales para que sean visibles en fondo blanco */
+.social-links a {
+  color: #6b347e !important;
+}
+
+.social-links a:hover {
+  color: #ff69b4 !important;
+}
