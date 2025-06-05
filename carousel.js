@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex < 0) currentIndex = totalItems - 1;
     if (currentIndex >= totalItems) currentIndex = 0;
 
-    const width = track.clientWidth;
-    track.style.transform = `translateX(-${currentIndex * width}px)`;
+    const itemWidth = track.children[0].offsetWidth + 20; // incluye gap
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
   }
 
-  // Exponer función globalmente si se usará en botones
+  // Exponer globalmente
   window.moveSlide = moveSlide;
 
-  // MENÚ
+  // MENÚ lateral si lo tenés
   const sidebar = document.getElementById("mySidebar");
   const openBtn = document.getElementById("openSidebar");
   const closeBtn = document.getElementById("closeSidebar");
@@ -45,7 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.classList.remove("open");
       }
     });
-  } else {
-    console.warn("Elementos del menú no encontrados.");
   }
 });
