@@ -1,0 +1,572 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #be96ca;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #1a141454;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.692);
+  position: relative;
+  z-index: 900;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* eje-x | eje-y | desenfoque | color */
+}
+
+.header-left h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation */
+.header-center nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-center nav ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+.header-center nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-center nav ul li a:hover {
+  color: #050101;
+  text-decoration: none;
+}
+
+/* Botón menú a la derecha */
+.openbtn {
+  font-size: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  z-index: 1100;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 0; /* Oculto inicialmente */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(213, 170, 221, 0.95);
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+  box-sizing: border-box;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar.open {
+  width: 250px; /* Se expande al hacer clic */
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 30px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(2, 2, 2, 0.144);
+}
+
+/* Botón cerrar menú */
+.sidebar .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Botones */
+button {
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 30px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Estilo para el título con enlace */
+.title-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.title-link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/*fin de menu y banner */
+
+/* interfaz de productos */
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+  }
+
+  .image-section img {
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(2, 1, 1);
+    padding: 30px;
+    border-radius: 16px;
+    width: 380px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .form-container h2 {
+    margin-top: 0;
+    font-size: 26px;
+    font-family:'Montserrat', sans-serif;
+  }
+
+  .form-container h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family:'Montserrat', sans-serif;
+  }
+
+  .price {
+    font-size: 26px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .cashback {
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 0.63);
+    margin-bottom: 20px;
+  }
+
+  .add-to-cart {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .add-to-cart:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+
+  .purchase {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .purchase:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+
+  .note {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  .quantity-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quantity-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .quantity-container input[type="number"] {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100px;
+  }
+
+  .total {
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:rgb(0, 0, 0);
+  }
+
+  /* interfaz carrito*/
+  
+  button.delete-btn {
+    background-color:rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  button.delete-btn:hover {
+    background-color: rgba(212, 144, 226, 0.63);
+  }
+
+  button.finalize-btn {
+    background-color:rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family:'Montserrat', sans-serif;
+  }
+  
+  button.finalize-btn:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+  
+/*interfaz confirmar*/
+
+  .confirm-btn {
+    background-color:rgba(248, 248, 248, 0.63);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+  
+  .checkout-add-btn {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .checkout-add-btn:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+  
+  .cancel-btn {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn:hover {
+    background-color:rgba(212, 144, 226, 0.63);
+  }
+  
+/*carrusel*/
+
+
+.section-title {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 1px;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #dddddd;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.artist-card {
+  background:rgba(255, 255, 255, 0.63);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+
+.artist-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+.artist-card h2 {
+  margin: 10px 0;
+  font-size: 26px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #000000;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-links a i {
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  background-color:rgba(212, 144, 226, 0.63);
+  color: #000000;
+}
+
+/* Botones del carrusel */
+.carousel-buttons {
+  display: flex;
+  justify-content: center; /* centrar */
+  gap: 30px; /* espacio entre botones reducido */
+  margin: auto;
+}
+
+.carousel-buttons button {
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.carousel-buttons button:hover {
+  background-color:rgba(212, 144, 226, 0.63);
+  color: #000000;
+}
+  
+  /* contacto*/
+
+  
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact-form label {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+
+#success-message {
+  display: none;
+  color: #0f0;
+  margin-top: 12px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#be96ca;
+}
+
+
+#contact-form button:hover {
+  background-color:  rgba(212, 144, 226, 0.63);
+}
+
+.send-btn {
+  background-color: rgba(255, 255, 255, 0.63);
+  color: rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.send-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  transform: scale(1.05);
+}
+
+/*sub banner*/
+
+  .contact-message {
+  text-align: center;
+}
+
+.contact-message h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.contact-message p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #ffffff;
+}
